@@ -1,0 +1,466 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
+// Colors
+$lola: #96d5e9;
+$milles: #405971;
+$paula: #00c9bd;
+
+$primary: #3c3c3c;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  // font-family: 'Paytone One', sans-serif;
+  color: $primary;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding: 100px;
+  background: #9e9494;
+  background: url("assets/bg2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+//
+
+#paula,
+#lola,
+#milles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lola {
+  .card {
+    &-box {
+      &-avatar {
+        &-image {
+          border-color: $lola;
+        }
+      }
+      &-pin {
+        h3 {
+          color: $lola;
+        }
+      }
+      &-title {
+        color: $lola;
+      }
+      &-infos {
+        background: rgba(150, 213, 233, 0.2);
+        div {
+          div {
+            background: $lola;
+          }
+        }
+      }
+      &-more {
+        h3 {
+          color: $lola;
+        }
+      }
+      &-class {
+        background: #ddf7ff;
+        h3 {
+          color: $lola;
+        }
+      }
+    }
+    &-numbers {
+      h2 {
+        background: linear-gradient(
+          180deg,
+          #ddf7ff 0%,
+          #80c3d8 25.52%,
+          #ddf7ff 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+#milles {
+  .card {
+    &-box {
+      &-avatar {
+        &-image {
+          border-color: $milles;
+        }
+      }
+      &-pin {
+        h3 {
+          color: $milles;
+        }
+      }
+      &-title {
+        color: $milles;
+      }
+      &-infos {
+        background: #f0f8ff;
+        div {
+          div {
+            background: $milles;
+          }
+        }
+      }
+      &-more {
+        h3 {
+          color: $milles;
+        }
+      }
+      &-class {
+        background: #d1e5f8;
+        h3 {
+          color: $milles;
+        }
+      }
+    }
+    &-numbers {
+      h2 {
+        background: linear-gradient(180deg, #405971 -64.71%, #a5cbee 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+#paula {
+  .card {
+    &-box {
+      &-avatar {
+        &-image {
+          border-color: $paula;
+        }
+      }
+      &-pin {
+        h3 {
+          color: $paula;
+        }
+      }
+      &-title {
+        color: $paula;
+      }
+      &-infos {
+        background: #e7fffe;
+        div {
+          div {
+            background: $paula;
+          }
+        }
+      }
+      &-more {
+        h3 {
+          color: $paula;
+        }
+      }
+      &-class {
+        background: #d3fffc;
+        h3 {
+          color: $paula;
+        }
+      }
+    }
+    &-numbers {
+      h2 {
+        background: linear-gradient(180deg, #0cb4aa 0%, #bffffb 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //background: url('assets/bg3.png');
+  &-box {
+    position: relative;
+    width: 389px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px 6px rgba(0, 0, 0, 0.18);
+    border-radius: 17px;
+    padding: 13px 30px 39px 30px;
+    margin-bottom: 20px;
+    &-star {
+      position: absolute;
+      z-index: -1;
+      &-1 {
+        bottom: -30px;
+        left: -80px;
+      }
+      &-2 {
+        top: -20px;
+        right: -80px;
+      }
+    }
+    &-avatar {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: -50px;
+      top: -40px;
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      z-index: 3;
+      &-image {
+        border: 5px solid;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-avatar {
+        z-index: 40;
+        position: absolute;
+        top: -20px;
+        right: -30px;
+      }
+    }
+    &-pin {
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      top: -65px;
+      right: -95px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      &-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      h3,
+      p,
+      img:nth-child(2) {
+        z-index: 3;
+        transform: rotate(-5.23deg);
+      }
+      h3 {
+        font-family: "Paytone One";
+        font-weight: 500;
+      }
+      p {
+        font-weight: 400;
+        font-size: 10px;
+        width: 50%;
+        margin-left: 35px;
+        color: #000000;
+      }
+    }
+    &-title {
+      font-family: "Paytone One";
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 50px;
+      margin-left: 40px;
+    }
+    &-subtitle {
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 17px;
+      margin-left: 40px;
+      margin-bottom: 15px;
+      color: #000000;
+    }
+    &-infos {
+      width: 200px;
+      border-radius: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        div {
+          width: 25px;
+          height: 25px;
+          border-radius: 4px;
+        }
+        h5 {
+          color: #000;
+          font-weight: 500;
+          font-size: 10px;
+        }
+      }
+    }
+    &-description {
+      width: 230px;
+      padding: 20px 0 5px 0;
+      p {
+        font-weight: 400;
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 20px;
+        span {
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+    }
+    &-more {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        div {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          gap: 5px;
+
+          h3 {
+            font-family: "Paytone One";
+            font-weight: 400;
+            margin-top: -3px;
+          }
+        }
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+    &-class {
+      position: absolute;
+      right: -80px;
+      top: 190px;
+      width: 200px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h3 {
+        font-family: "Paytone One";
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        font-weight: 400;
+        font-size: 13px;
+        span {
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &-sep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    h3 {
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.44);
+    }
+  }
+  &-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      background: rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(12px);
+      border-radius: 14px;
+      padding: 10px;
+      width: 140px;
+
+      h5 {
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      h2 {
+        font-family: "Paytone One";
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 34px;
+        text-align: center;
+      }
+    }
+  }
+}
